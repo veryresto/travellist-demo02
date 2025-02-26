@@ -30,6 +30,8 @@ services:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - travellist
+    ports:
+      - 3306:3306
 
   nginx:
     image: nginx:alpine
