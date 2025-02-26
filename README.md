@@ -26,10 +26,11 @@ php version that is automatically install using command apt is php8.3
     sudo apt update
     sudo apt install -y docker-ce
     ````
-    allow current non-root user to execute docker command
+    allow current non-root user to execute docker command. 
     ````
     sudo usermod -aG docker ${USER}
     ````
+    Need to relogin as current non-root user to another session after executing this command.
 3. clone app
     setup private key on ~/.ssh/id_ed25519
     ````
