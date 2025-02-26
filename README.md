@@ -23,13 +23,14 @@ php version that is automatically install using command apt is php8.3
     ````
 5. install packages on app container
     ````
-    composer update && composer install
+    docker compose exec app composer update
+    docker compose exec app composer install
     ````
 6. generate key into .env APP_KEY
     ````
-    php artisan key:generate
+    docker compose exec app php artisan key:generate
     ````
 7. run migration files
     ````
-    php artisan migrate
+    docker compose exec app php artisan migrate
     ````
