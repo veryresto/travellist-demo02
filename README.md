@@ -7,7 +7,7 @@ We are using DigitalOcean droplet with Ubuntu 22.04 for testing the application.
 
 php version that is automatically install using command apt is php8.3
 
-1. add non-root user
+1. as root user, add non-root user
     ````
     adduser sammy
     ````
@@ -17,35 +17,46 @@ php version that is automatically install using command apt is php8.3
     ````
     rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy
     ````
-2. clone app
+2. login as non-root user
+    ````
+    adduser sammy
+    ````
+    ````
+    usermod -aG sudo sammy
+    ````
+    ````
+    rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy
+    ````
+3. clone app
     setup private key on ~/.ssh/id_ed25519
     ````
     cd ~
     git clone git@github.com:veryresto/travellist-demo02.git
     ````
-3. create .env from .env.example
+4. create .env from .env.example
     ````
     cd ~/travellist-demo02
     cp .env.example .env
     ````
-4. spin up all containers
+5. spin up all containers
     ````
     docker compose up -d
     ````
-5. install packages on app container
+6. install packages on app container
     ````
     docker compose exec app composer update
     docker compose exec app composer install
     ````
-6. generate key into .env APP_KEY
+7. generate key into .env APP_KEY
     ````
     docker compose exec app php artisan key:generate
     ````
-7. run migration files
+8. run migration files and seed data
     ````
     docker compose exec app php artisan migrate
     ````
-8. seed data
     ````
     docker compose exec app php artisan db:seed --class=PlacesSeeder
     ````
+
+    
