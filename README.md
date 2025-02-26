@@ -35,3 +35,7 @@ php version that is automatically install using command apt is php8.3
     ````
     docker compose exec app php artisan migrate
     ````
+8. seed data
+    ````
+    docker compose exec app php artisan db:seed --class=PlacesSeeder
+    ````
