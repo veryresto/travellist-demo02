@@ -15,7 +15,6 @@ class CreatePlaces extends Migration
             $table->integer('id')->autoIncrement();
             $table->string('name', 255);
             $table->boolean('visited');
-            $table->primary('id');
         });
     }
 
