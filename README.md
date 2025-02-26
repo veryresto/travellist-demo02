@@ -17,15 +17,18 @@ php version that is automatically install using command apt is php8.3
     ````
     rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy
     ````
-2. login as non-root user
+2. login as non-root user, then install docker
     ````
-    adduser sammy
+    sudo apt update
+    sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo apt update
+    sudo apt install -y docker-ce
     ````
+    allow current non-root user to execute docker command
     ````
-    usermod -aG sudo sammy
-    ````
-    ````
-    rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy
+    sudo usermod -aG docker ${USER}
     ````
 3. clone app
     setup private key on ~/.ssh/id_ed25519
