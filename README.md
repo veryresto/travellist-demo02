@@ -15,6 +15,7 @@ php version that is automatically install using command apt is php8.3
     ````
 3. create .env from .env.example
     ````
+    cd travellist-demo02
     cp .env.example .env
     ````
 4. spin up all containers
