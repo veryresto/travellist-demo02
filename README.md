@@ -10,7 +10,11 @@ php version that is automatically install using command apt is php8.3
 1. add non-root user
     ````
     adduser sammy
+    ````
+    ````
     usermod -aG sudo sammy
+    ````
+    ````
     rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy
     ````
 2. clone app
