@@ -1,3 +1,5 @@
+## References
+1. [Ensure linux server has non-root user](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu)
 ## Setup Server
 We are using DigitalOcean droplet with Ubuntu 22.04 for testing the application.
 
