@@ -1,5 +1,7 @@
 ## References
 1. [Ensure linux server has non-root user](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu)
+2. [Give non-root user access to docker command](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
+3. [Setup laravel using docker compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-set-up-laravel-with-docker-compose-on-ubuntu-22-04)
 ## Setup Server
 We are using DigitalOcean droplet with Ubuntu 22.04 for testing the application.
 
