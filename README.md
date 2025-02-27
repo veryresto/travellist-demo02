@@ -3,9 +3,7 @@
 2. [Give non-root user access to docker command](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
 3. [Setup laravel using docker compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-set-up-laravel-with-docker-compose-on-ubuntu-22-04)
 ## Setup Server
-We are using DigitalOcean droplet with Ubuntu 22.04 for testing the application.
-
-php version that is automatically install using command apt is php8.3
+We are using DigitalOcean droplet Ubuntu 22.04 for testing the application.
 
 1. as root user, add non-root user
     ````
