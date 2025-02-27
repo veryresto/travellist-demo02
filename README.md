@@ -9,7 +9,7 @@ php version that is automatically install using command apt is php8.3
 
 1. as root user, add non-root user
     ````
-    adduser sammy
+    adduser --disabled-password --gecos "" sammy
     ````
     ````
     usermod -aG sudo sammy
