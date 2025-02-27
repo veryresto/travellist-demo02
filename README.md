@@ -32,10 +32,9 @@ php version that is automatically install using command apt is php8.3
     ````
     Need to relogin as current non-root user to another session after executing this command.
 3. clone app
-    setup private key on ~/.ssh/id_ed25519
     ````
     cd ~
-    git clone git@github.com:veryresto/travellist-demo02.git
+    git clone https://github.com/veryresto/travellist-demo02.git
     ````
 4. create .env from .env.example
     ````
