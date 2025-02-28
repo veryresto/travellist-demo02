@@ -16,7 +16,7 @@ jobs:
         with:
           host: ${{ secrets.LINUX_MACHINE_IP }}
           username: ${{ secrets.LINUX_MACHINE_USERNAME }}
-          ssh_private_key: ${{ secrets.LINUX_MACHINE_SSH_PRIVATE_KEY }}
+          key: ${{ secrets.LINUX_MACHINE_SSH_PRIVATE_KEY }}
           script: |
             cd ~/travellist-demo02
             git pull
