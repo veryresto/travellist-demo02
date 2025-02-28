@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <h1>My Travel Bucket Plan</h1>
+    <h1>My Travel Bucket Planz</h1>
     <h2>Places I'd Like to Visit</h2>
     <ul>
       @foreach ($togo as $newplace)
