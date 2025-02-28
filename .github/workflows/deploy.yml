@@ -1,0 +1,23 @@
+# .github/workflows/deploy.yml
+
+name: Deploy to Linux Machine
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH into Linux machine
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.LINUX_MACHINE_IP }}
+          username: ${{ secrets.LINUX_MACHINE_USERNAME }}
+          ssh_private_key: ${{ secrets.LINUX_MACHINE_SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/travellist-demo02
+            git pull
+            docker compose exec app php artisan migrate
