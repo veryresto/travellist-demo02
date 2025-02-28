@@ -29,30 +29,33 @@ We are using DigitalOcean droplet Ubuntu 22.04 for testing the application.
     sudo usermod -aG docker ${USER}
     ````
     Need to relogin as current non-root user to another session after executing this command.
-3. clone app
+
+## Setup App
+
+1. clone app
     ````
     cd ~
     git clone https://github.com/veryresto/travellist-demo02.git
     ````
-4. create .env from .env.example
+2. create .env from .env.example
     ````
     cd ~/travellist-demo02
     cp .env.example .env
     ````
-5. spin up all containers
+3. spin up all containers
     ````
     docker compose up -d
     ````
-6. install packages on app container
+4. install packages on app container
     ````
     docker compose exec app composer update
     docker compose exec app composer install
     ````
-7. generate key into .env APP_KEY
+5. generate key into .env APP_KEY
     ````
     docker compose exec app php artisan key:generate
     ````
-8. run migration files and seed data
+6. run migration files and seed data
     ````
     docker compose exec app php artisan migrate
     ````
