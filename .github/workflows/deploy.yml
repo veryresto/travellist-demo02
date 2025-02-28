@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SSH into Linux machine
-        uses: appleboy/ssh-action@v1
+        uses: appleboy/ssh-action@v1.2.1
         with:
           host: ${{ secrets.LINUX_MACHINE_IP }}
           username: ${{ secrets.LINUX_MACHINE_USERNAME }}
